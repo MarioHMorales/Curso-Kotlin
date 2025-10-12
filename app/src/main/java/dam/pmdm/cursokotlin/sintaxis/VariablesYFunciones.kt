@@ -1,4 +1,4 @@
-package dam.pmdm.cursokotlin
+package dam.pmdm.cursokotlin.sintaxis
 
 val age: Int = 30
 

@@ -1,4 +1,4 @@
-package dam.pmdm.cursokotlin
+package dam.pmdm.cursokotlin.sintaxis
 
 fun main() {
     ifMultipleOR()
