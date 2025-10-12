@@ -34,10 +34,3 @@ class FirstAppActivity : AppCompatActivity() {
         //Al arrancar la pantalla
     }
 }
-
-class MenuActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu)
-        }
-    }
