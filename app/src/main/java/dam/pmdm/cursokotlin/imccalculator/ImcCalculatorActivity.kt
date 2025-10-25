@@ -1,10 +1,8 @@
 package dam.pmdm.cursokotlin.imccalculator
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -12,7 +10,6 @@ import androidx.core.content.ContextCompat
 import dam.pmdm.cursokotlin.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
-import org.w3c.dom.Text
 import java.text.DecimalFormat
 
 
@@ -105,10 +102,10 @@ class ImcCalculatorActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun calculateIMC():Double {
-        val df = DecimalFormat("#.##")
-        val imc = currentWeight / (currentHeight.toDouble() /100 * currentHeight.toDouble()/100)
-        return df.format(imc).toDouble()
+    private fun calculateIMC(): Double {
+        val imc = currentWeight / ((currentHeight.toDouble() / 100) * (currentHeight.toDouble() / 100))
+        // Redondear a 2 decimales sin usar formato con coma
+        return String.format("%.2f", imc).replace(",", ".").toDouble()
     }
 
     private fun setAge() {
